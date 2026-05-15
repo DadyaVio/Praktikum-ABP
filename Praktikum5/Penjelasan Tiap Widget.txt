@@ -1,0 +1,79 @@
+Nama: Dadya Vio Hendraksa
+NIM: 2311102123
+
+Penjelasan tiap widget
+
+1. Container
+
+Pada program ini, Container digunakan untuk membuat kotak biru dengan sudut membulat dan tulisan Container di tengah.
+
+Fungsi pada kode:
+
+Mengatur ukuran (width, height)
+Memberi warna (color)
+Membuat sudut membulat (borderRadius)
+Menampilkan teks di tengah (Center)
+2. GridView
+
+Pada program ini, GridView.count() digunakan untuk menampilkan 6 item dalam 3 kolom.
+
+Fungsi pada kode:
+
+crossAxisCount: 3 → jumlah kolom = 3
+List.generate(6) → membuat 6 item otomatis
+Card → mempercantik tampilan item
+
+Hasil: tampilan seperti menu atau galeri.
+
+3. ListView
+
+Pada program ini, ListView digunakan untuk menampilkan daftar sederhana:
+
+A
+B
+C
+
+Data ditulis manual menggunakan ListTile.
+
+Cocok untuk list sedikit dan statis.
+
+4. ListView.builder
+
+Pada program ini, ListView.builder digunakan untuk membuat daftar buah dari array:
+
+final List<String> buah = [
+ "Apel",
+ "Jeruk",
+ "Mangga",
+ "Anggur",
+ "Semangka"
+];
+
+Setiap item dibuat otomatis dengan:
+
+itemBuilder: (context,index)
+
+Lebih efisien untuk data banyak.
+
+5. ListView.separated
+
+Pada program ini, ListView.separated digunakan untuk menampilkan daftar buah dengan garis pembatas (Divider) di antara item.
+
+Fungsi:
+
+separatorBuilder:
+(_,__) => const Divider()
+
+Sehingga tampilan list lebih rapi dan mudah dibaca.
+
+6. Stack
+
+Pada program ini, Stack digunakan untuk menumpuk beberapa widget:
+
+Lapisan:
+
+Container merah (paling belakang)
+Container kuning (lapisan tengah)
+Teks STACK (lapisan atas)
+
+Hasilnya tampak bertumpuk seperti layer.
