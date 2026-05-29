@@ -1,0 +1,63 @@
+Nama: Dadya Vio Hendraksa
+NIM: 2311102123
+
+Penjelasan tiap widget
+
+1. Widget Struktur Aplikasi (The Core)
+MyApp (StatelessWidget)
+
+Fungsi: Merupakan akar (root) dari seluruh aplikasi Flutter kamu. Disebut Stateless karena struktur dasarnya statis dan tidak berubah bentuk secara dinamis selama aplikasi berjalan.
+
+MaterialApp
+
+Fungsi: Widget pembungkus yang menyediakan konfigurasi dasar bertema Material Design (gaya visual standar Android). Di sini kamu mengatur judul aplikasi, mengaktifkan useMaterial3: true, serta menentukan halaman pertama yang muncul via properti home.
+
+MyHomePage (StatefulWidget)
+
+Fungsi: Halaman utama tempat fitur kamera dan galeri bekerja. Menggunakan Stateful karena halaman ini perlu merespons perubahan data secara dinamis (yaitu ketika variabel _image berubah dari kosong menjadi berisi foto setelah memanggil setState).
+
+2. Widget Tata Letak (Layout & Positioning)
+Scaffold
+
+Fungsi: Menyediakan struktur dasar visual halaman (seperti kanvas putih). Widget ini yang menyiapkan tempat untuk menaruh AppBar di atas dan body di area tengah layar.
+
+AppBar
+
+Fungsi: Bilah menu (toolbar) di bagian paling atas halaman untuk menampilkan judul aplikasi ("Kamera & Notifikasi").
+
+Center
+
+Fungsi: Widget tata letak sederhana yang tugasnya memastikan semua komponen anak di dalamnya berada tepat di tengah-tengah layar secara horizontal maupun vertikal.
+
+Column
+
+Fungsi: Menyusun widget-widget di dalamnya secara vertikal (dari atas ke bawah). Di kode ini, Column digunakan untuk menjajarkan area foto, tombol kamera, dan tombol galeri secara berurutan ke bawah.
+
+SizedBox
+
+Fungsi: Widget "kotak kosong" yang digunakan untuk memberi jarak (spacing). Di kode kamu, SizedBox(height: 40) dipakai agar tombol tidak menempel langsung di bawah kotak foto.
+
+3. Widget Konten, Tampilan, & Interaksi
+Container
+
+Fungsi: Widget serbaguna untuk dekorasi. Di sini, Container disulap menjadi kotak berukuran 300x300 dengan latar belakang abu-abu (Colors.grey[200]) sebagai tempat "bingkai" pratinjau foto.
+
+ClipRRect (Clip Rounded Rectangle)
+
+Fungsi: Memotong (clipping) widget anaknya agar sudut-sudutnya melengkung. Ini digunakan agar foto yang tampil ujungnya ikut membulat halus (BorderRadius.circular(12)) sesuai bentuk bingkai Container.
+
+Image.file
+
+Fungsi: Widget khusus untuk membaca dan menampilkan file gambar dari penyimpanan lokal perangkat (berdasarkan path internal yang didapat dari image_picker).
+
+Text
+
+Fungsi: Menampilkan string atau teks biasa ke layar, seperti tulisan "Belum ada foto yang dipilih" atau label pada tombol.
+
+ElevatedButton.icon
+
+Fungsi: Tombol modern dengan efek bayangan (timbul) yang secara instan menggabungkan ikon dan teks di dalamnya. Properti onPressed pada tombol ini bertugas memicu fungsi kamera atau galeri.
+
+Icon
+
+Fungsi: Menampilkan simbol grafis bawaan Flutter. Kamu memakai Icons.camera_alt untuk simbol kamera dan Icons.photo_library untuk simbol galeri agar tombol terlihat lebih intuitif.
